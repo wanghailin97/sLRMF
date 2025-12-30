@@ -15,7 +15,7 @@ M0 = U0 * S0 * V0';
 beta = subspace_smoothness_parameter(M0, r);
 
 %% noisy observation
-sigma = 0.5; % can be quite large
+sigma = 2; % can be quite large
 noisy_M = M0 + sigma * randn(n, n);
 rmse_obs = norm(noisy_M - M0, 'fro') / n;
 
